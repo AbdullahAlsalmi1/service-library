@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Library | Ascend Solutions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #eef3f9);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #fff;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    header img {
+      max-height: 55px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #007BFF;
+    }
+
+    .lang-switch button {
+      padding: 6px 12px;
+      margin-left: 8px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .lang-switch button:hover {
+      background-color: #0056b3;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      text-align: center;
+      padding: 50px 20px 20px 20px;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ===== SEARCH BAR ===== */
+    .search-container {
+      max-width: 800px;
+      margin: 25px auto 10px auto;
+      text-align: center;
+    }
+
+    .search-container input {
+      width: 90%;
+      max-width: 600px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 26px;
+      margin-bottom: 25px;
+    }
+
+    /* ===== GRID & CARDS ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #007BFF;
+    }
+
+    .card iframe, 
+    .card video, 
+    .card img {
+      width: 100%;
+      height: 280px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo-container">
+      <img src="images/ascend_solutions.JPG" alt="Ascend Solutions Logo">
+      <h1 data-ar="مكتبة Ascend Solutions" data-en="Ascend Solutions Library">مكتبة Ascend Solutions</h1>
+    </div>
+    <div class="lang-switch">
+      <button onclick="setLang('ar')">عربي</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT ===== -->
+  <div class="contact" data-ar="في حال واجهتكم أي مشكلة في الجهاز، يُرجى التواصل عبر البريد الإلكتروني: service@ascend.com.sa" data-en="If you face any issue with the device, please contact us via email: service@ascend.com.sa">
+    في حال واجهتكم أي مشكلة في الجهاز، يُرجى التواصل عبر البريد الإلكتروني: <a href="mailto:service@ascend.com.sa">service@ascend.com.sa</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <h2 data-ar="مكتبة الخدمة" data-en="Service Library">مكتبة الخدمة</h2>
+    <p data-ar="هنا ستجد جميع الملفات، الكتيبات، الفيديوهات والصور المتعلقة بالأجهزة والخدمات." 
+       data-en="Here you will find all manuals, datasheets, videos, and images related to devices and services.">
+       هنا ستجد جميع الملفات، الكتيبات، الفيديوهات والصور المتعلقة بالأجهزة والخدمات.
+    </p>
+  </div>
+
+  <!-- ===== SEARCH ===== -->
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="ابحث عن ملف PDF أو فيديو أو صورة..." data-ar="ابحث عن ملف PDF أو فيديو أو صورة..." data-en="Search for a PDF, Video, or Image...">
+  </div>
+
+  <!-- ===== PDFs ===== -->
+  <section>
+    <h2 data-ar="ملفات PDF" data-en="PDF Files">ملفات PDF</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>BeneHeart C&S Ops Manual (Arabic)</h3>
+        <iframe src="pdfs/H-046-028049-01 BeneHeart C&S series ops manual (Arabic)-1.0.pdf"></iframe>
+        <a class="btn" href="pdfs/H-046-028049-01 BeneHeart C&S series ops manual (Arabic)-1.0.pdf" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>C1A Datasheet (English)</h3>
+        <iframe src="pdfs/02_C1A_Datasheet_ENG_V1.0_20190830.pdf"></iframe>
+        <a class="btn" href="pdfs/02_C1A_Datasheet_ENG_V1.0_20190830.pdf" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>C1A Brochure (English)</h3>
+        <iframe src="pdfs/01_C1A_Brochure_ENG_V1.0_20190830.pdf"></iframe>
+        <a class="btn" href="pdfs/01_C1A_Brochure_ENG_V1.0_20190830.pdf" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>C Series Ops Manual (English)</h3>
+        <iframe src="pdfs/H-046-012619-00 C series ops manual_ENG-5.0.pdf"></iframe>
+        <a class="btn" href="pdfs/H-046-012619-00 C series ops manual_ENG-5.0.pdf" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>AED Quick Guide (Arabic)</h3>
+        <iframe src="pdfs/H-046-017701-00 AED quick guide (Arabic)-2.0-20230825.pdf"></iframe>
+        <a class="btn" href="pdfs/H-046-017701-00 AED quick guide (Arabic)-2.0-20230825.pdf" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>D60 Datasheet (English)</h3>
+        <iframe src="pdfs/02_D60_Datasheet_ENG_V1.1_20230331.pdf"></iframe>
+        <a class="btn" href="pdfs/02_D60_Datasheet_ENG_V1.1_20230331.pdf" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>BeneHeart D60 D50 Ops Manual (English)</h3>
+        <iframe src="pdfs/H-046-024585-00 BeneHeart D60 D50 Ops Manual (English)-6.0.pdf"></iframe>
+        <a class="btn" href="pdfs/H-046-024585-00 BeneHeart D60 D50 Ops Manual (English)-6.0.pdf" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>BeneHeart D60 Brochure (English)</h3>
+        <iframe src="pdfs/BeneHeart D60_Brochure ENG_20230822_s (1).pdf"></iframe>
+        <a class="btn" href="pdfs/BeneHeart D60_Brochure ENG_20230822_s (1).pdf" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>Pulse Oximetry Waveform Study</h3>
+        <iframe src="pdfs/Pulse oximetry waveform A non-invasive physiological predictor for the return of spontaneous circulat.pdf"></iframe>
+        <a class="btn" href="pdfs/Pulse oximetry waveform A non-invasive physiological predictor for the return of spontaneous circulat.pdf" target="_blank">Open / Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Videos ===== -->
+  <section>
+    <h2 data-ar="الفيديوهات" data-en="Videos">الفيديوهات</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>WhatsApp Video 2025-09-16 at 3.13.31 PM</h3>
+        <video controls>
+          <source src="videos/WhatsApp Video 2025-09-16 at 3.13.31 PM.mp4" type="video/mp4">
+        </video>
+        <a class="btn" href="videos/WhatsApp Video 2025-09-16 at 3.13.31 PM.mp4" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>WhatsApp Video 2025-09-16 at 3.13.37 PM</h3>
+        <video controls>
+          <source src="videos/WhatsApp Video 2025-09-16 at 3.13.37 PM.mp4" type="video/mp4">
+        </video>
+        <a class="btn" href="videos/WhatsApp Video 2025-09-16 at 3.13.37 PM.mp4" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>WhatsApp Video 2025-09-16 at 3.13.25 PM</h3>
+        <video controls>
+          <source src="videos/WhatsApp Video 2025-09-16 at 3.13.25 PM.mp4" type="video/mp4">
+        </video>
+        <a class="btn" href="videos/WhatsApp Video 2025-09-16 at 3.13.25 PM.mp4" target="_blank">Open / Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Images ===== -->
+  <section>
+    <h2 data-ar="الصور" data-en="Images">الصور</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Photo 1</h3>
+        <img src="images/photo1.JPG" alt="Photo 1">
+        <a class="btn" href="images/photo1.JPG" target="_blank">Open / Download</a>
+      </div>
+
+      <div class="card">
+        <h3>WhatsApp Image 2025-09-16 at 3.13.37 PM</h3>
+        <img src="images/WhatsAppImage2025-09-16at3.13.37PM.JPG" alt="WhatsApp Image">
+        <a class="btn" href="images/WhatsAppImage2025-09-16at3.13.37PM.JPG" target="_blank">Open / Download</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ===== LANGUAGE SWITCH =====
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+      document.querySelectorAll("[data-ar]").forEach(el => {
+        el.innerHTML = (lang === 'ar') ? el.getAttribute("data-ar") : el.getAttribute("data-en");
+      });
+
+      document.querySelectorAll("input[placeholder]").forEach(el => {
+        el.placeholder = (lang === 'ar') ? el.getAttribute("data-ar") : el.getAttribute("data-en");
+      });
+    }
+
+    // ===== SMART SEARCH =====
+    document.getElementById("searchBox").addEventListener("keyup", function() {
+      let filter = this.value.toLowerCase();
+      let cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
